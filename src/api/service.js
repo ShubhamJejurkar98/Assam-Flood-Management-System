@@ -1,0 +1,93 @@
+import axios from "axios";
+
+const API_URL_donatorhomepage = 'http://localhost:3006/donatordetail';
+const API_URL_fooddonationdetails = 'http://localhost:3006/fooddonatordetail';
+const API_URL_paymentmode = 'http://localhost:3006/paymentmode';
+const API_URL_card = 'http://localhost:3006/card';
+const API_URL_upi = 'http://localhost:3006/upi';
+
+export const Adddonator = async (data) => {
+   try {
+      return await axios.post(API_URL_donatorhomepage, data);
+   }
+   catch (error) {
+      console.log("error with my side", error.message);
+   }
+
+}
+
+
+export const donatorslip = async () => {
+   try {
+      return await axios.get(API_URL_donatorhomepage);
+   }
+   catch (error) {
+      console.log("error with my side in donator slip", error.message);
+   }
+
+}
+
+
+export const Addfood = async (data) => {
+   try {
+      return await axios.post(API_URL_fooddonationdetails, data);
+   }
+   catch (error) {
+      console.log("error with my side", error.message);
+   }
+
+}
+
+
+export const fooddonatorslip = async () => {
+   try {
+      return await axios.get(API_URL_fooddonationdetails);
+   }
+   catch (error) {
+      console.log("error with my side in donator slip", error.message);
+   }
+
+}
+
+
+
+export const paymentmode = async (data) => {
+   try {
+      return await axios.post(API_URL_paymentmode, data);
+   }
+   catch (error) {
+      console.log("error with my payment", error.message);
+   }
+
+}
+
+
+
+
+
+
+
+export const Addcard = async (data) => {
+   try {
+      return await axios.post(API_URL_card, data);
+   }
+   catch (error) {
+      console.log("error with my card", error.message);
+   }
+
+}
+
+
+
+
+export const Addupi = async (data) => {
+   try {
+      return await axios.post(API_URL_upi, data);
+   }
+   catch (error) {
+      console.log("error with my upi", error.message);
+   }
+
+}
+
+
